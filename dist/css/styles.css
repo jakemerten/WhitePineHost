@@ -10993,3 +10993,22 @@ header.masthead h1, header.masthead .h1 {
 #portfolio .container-fluid .portfolio-box:hover .portfolio-box-caption, #portfolio .container-sm .portfolio-box:hover .portfolio-box-caption, #portfolio .container-md .portfolio-box:hover .portfolio-box-caption, #portfolio .container-lg .portfolio-box:hover .portfolio-box-caption, #portfolio .container-xl .portfolio-box:hover .portfolio-box-caption, #portfolio .container-xxl .portfolio-box:hover .portfolio-box-caption {
   opacity: 1;
 }
+
+/* Custom CSS for See More/See Less functionality */
+.more-text {
+    display: none; /* This hides the content by default */
+}
+
+.read-more-btn {
+    /* Basic styling for the button/link */
+    color: #78866b; /* This is the primary color from the Creative theme. Adjust if your theme color is different. */
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 5px; /* Add a little space from the text */
+    white-space: nowrap; /* Prevents button from breaking into new line if text is long */
+}
+
+.read-more-btn:hover {
+    text-decoration: underline;
+}

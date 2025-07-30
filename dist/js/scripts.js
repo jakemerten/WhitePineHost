@@ -56,4 +56,32 @@ window.addEventListener('DOMContentLoaded', event => {
         elements: '#portfolio a.portfolio-box'
     });
 
+    document.addEventListener('DOMContentLoaded', function() {
+    // Select all elements with the class 'read-more-btn'
+    const readMoreButtons = document.querySelectorAll('.read-more-btn');
+
+    // Loop through each button and add a click event listener
+    readMoreButtons.forEach(button => {
+        button.addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent default link behavior (e.g., jumping to top of page)
+
+            // Find the parent paragraph of the clicked button
+            const parentParagraph = this.closest('p');
+
+            // Find the '.more-text' span within that paragraph
+            const moreText = parentParagraph.querySelector('.more-text');
+
+            // Toggle the display style of the 'more-text'
+            if (moreText.style.display === 'none' || moreText.style.display === '') {
+                moreText.style.display = 'inline'; // Show the text
+                this.textContent = 'See Less'; // Change button text
+            } else {
+                moreText.style.display = 'none'; // Hide the text
+                this.textContent = 'See More'; // Change button text back
+            }
+        });
+    });
+});
+
+
 });
