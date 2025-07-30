@@ -56,7 +56,11 @@ window.addEventListener('DOMContentLoaded', event => {
         elements: '#portfolio a.portfolio-box'
     });
 
-    document.addEventListener('DOMContentLoaded', function() {
+    
+
+});
+
+document.addEventListener('DOMContentLoaded', function() {
     // Select all elements with the class 'read-more-btn'
     const readMoreButtons = document.querySelectorAll('.read-more-btn');
 
@@ -81,7 +85,4 @@ window.addEventListener('DOMContentLoaded', event => {
             }
         });
     });
-});
-
-
 });
