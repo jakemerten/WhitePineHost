@@ -514,32 +514,6 @@
           // Shrink the navbar initially if scrolled, and add listener for scroll
           navbarShrink();
           document.addEventListener('scroll', navbarShrink);
-
-          // Optional: Re-init ScrollSpy if existing script failed
-          if (navbarCollapsible) {
-              new bootstrap.ScrollSpy(document.body, {
-                  target: '#mainNav',
-                  rootMargin: '0px 0px -40%',
-              });
-          }
-
-          // 2. Read More / See Less Toggle
-          const readMoreButtons = document.querySelectorAll('.read-more-btn');
-          readMoreButtons.forEach(button => {
-              button.addEventListener('click', function(e) {
-                  e.preventDefault(); 
-                  const parentParagraph = this.closest('p');
-                  const moreText = parentParagraph.querySelector('.more-text');
-                  
-                  if (moreText.style.display === 'none' || moreText.style.display === '') {
-                      moreText.style.display = 'inline';
-                      this.textContent = 'See Less';
-                  } else {
-                      moreText.style.display = 'none';
-                      this.textContent = 'See More';
-                  }
-              });
-          });
       });
     </script>
     
